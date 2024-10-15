@@ -28,8 +28,8 @@ const NavWeb: FC<NavWebProps> = () => {
     };
 
     return (
-        <div className='flex flex-row items-center justify-between w-full px-12' style={{ backgroundColor: '#1d305e' }}>
-            <div className='flex flex-row items-center py-2 text-xs'>
+        <div className='flex flex-row items-center justify-between w-full px-12 text-gray-300' style={{ backgroundColor: '#1d305e' }}>
+            <div className='flex flex-row justify-between items-center py-2 text-xs '>
                 <div className='py-auto' onClick={() => redirectHome()}>
                     <Logo />
                 </div>
@@ -63,11 +63,16 @@ const NavWeb: FC<NavWebProps> = () => {
                     </div>
                 )}
             </div>
-     
+            <div className='flex flex-row items-center'>
             <SearchBar/>
-            <div className='flex flex-col text-xs'>
-                <button className='px-7 py-1 bg-transparent hover:bg-white hover:bg-opacity-10 text-white border border-white rounded-lg my-1'>Registro</button>
-                <button className='px-7 py-1 bg-transparent hover:bg-white hover:bg-opacity-10 text-white border border-white rounded-lg my-1'>Iniciar sesión</button>
+            <div className='flex flex-row text-xs '>
+                <button className='px-5 py-2 bg-white bg-opacity-10 hover:bg-opacity-30 text-white  rounded-lg mr-1 '
+                 style={{width:'120px'}}>
+                    Registro</button>
+                    <button className='px-5 py-2 bg-white bg-opacity-10 hover:bg-opacity-30 text-white  rounded-lg mr-1 '
+                style={{width:'120px'}}>
+                    Iniciar sesión</button>
+            </div>
             </div>
         </div>
     );

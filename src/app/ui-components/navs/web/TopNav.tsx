@@ -1,9 +1,14 @@
 'use client';
 import React, { FC, useState, useEffect } from 'react';
 import Logo from '../../logo/Logo';
- import SearchBar from '../SearchBar';
+import SearchBar from '../SearchBar';
 
 interface NavWebProps {}
+
+// Función para redirigir a la página principal
+const redirectHome = () => {
+    window.location.href = '/';
+};
 
 const NavWeb: FC<NavWebProps> = () => {
     const [edition, setEdition] = useState('');
@@ -16,7 +21,7 @@ const NavWeb: FC<NavWebProps> = () => {
         if (['es', 'al', 'pt'].includes(firstPart)) {
             setEdition(firstPart);
         }
-    }, []); // Solo se ejecuta una vez al montar el componente
+    }, []);  
 
     const changeEdition = (chosenEdition: string) => {
         setEdition(chosenEdition);
@@ -25,7 +30,7 @@ const NavWeb: FC<NavWebProps> = () => {
     return (
         <div className='flex flex-row items-center justify-between w-full px-12' style={{ backgroundColor: '#1d305e' }}>
             <div className='flex flex-row items-center py-2'>
-                <div className='py-auto'>
+                <div className='py-auto' onClick={() => redirectHome()}>
                     <Logo />
                 </div>
                 {( edition == '' || edition == undefined  ) && (
@@ -36,7 +41,7 @@ const NavWeb: FC<NavWebProps> = () => {
                     </div>
                 )}
                               
-                                {(edition === 'es'  ) && (
+                {(edition === 'es'  ) && (
                     <div className='flex flex-col ml-12 w-56 mt-2'>
                         <a href="/es" className='hover:font-bold font-bold' onClick={() => changeEdition('es')}>Edición España</a>
                         <a href="/pt" className='hover:font-bold' onClick={() => changeEdition('pt')}>Edición Portugal</a>
@@ -59,8 +64,8 @@ const NavWeb: FC<NavWebProps> = () => {
                 )}
             </div>
      
-                <SearchBar/>
-             <div className='flex flex-col'>
+            <SearchBar/>
+            <div className='flex flex-col'>
                 <button className='px-7 py-1 bg-transparent hover:bg-white hover:bg-opacity-10 text-white border border-white rounded-lg my-1'>Registro</button>
                 <button className='px-7 py-1 bg-transparent hover:bg-white hover:bg-opacity-10 text-white border border-white rounded-lg my-1'>Iniciar sesión</button>
             </div>

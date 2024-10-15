@@ -9,7 +9,7 @@ const SearchBar: FC<SearchBarProps> = () => {
         className='bg-transparent pl-5 py-2 w-full placeholder-white  h-12'
         placeholder='Buscar...'
       />
-      <div className='w-20  w-full my-auto'>
+      <div className='w-20 my-auto'>
         <svg
           viewBox="0 0 60 30"
           xmlns="http://www.w3.org/2000/svg"

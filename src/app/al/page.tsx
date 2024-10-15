@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import Layout from '../layout';
 
 interface AlProps {
   
@@ -6,8 +7,11 @@ interface AlProps {
 
 const Al: FC<AlProps> = ({ }) => {
   return (
-    <div>Al</div>
-  );
+    <Layout>
+      <div>
+        Al
+      </div>
+    </Layout>  );
 };
 
 export default Al;

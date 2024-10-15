@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import Layout from '../layout';
 
 interface PtProps {
   
@@ -6,8 +7,11 @@ interface PtProps {
 
 const Pt: FC<PtProps> = ({ }) => {
   return (
-    <div>Pt</div>
-  );
+    <Layout>
+      <div>
+        Pt
+      </div>
+    </Layout>  );
 };
 
 export default Pt;

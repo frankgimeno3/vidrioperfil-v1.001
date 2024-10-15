@@ -32,37 +32,43 @@ const FixedNav: FC<FixedNavProps> = ({ sectionSelected }) => {
             style={{ backgroundColor: '#657896' }}
         >
             <button 
-                className={`py-5 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'home' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
+                className={`py-3 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'home' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
                 onClick={() => useRedirectNavLink('home')}
             >
                 NOTICIAS
             </button>
             <button 
-                className={`py-5 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'directorio' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
+                className={`py-3 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'directorio' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
                 onClick={() => useRedirectNavLink('directorio')}
             >
                 DIRECTORIO
             </button>
             <button 
-                className={`py-5 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'revistas' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
+                className={`py-3 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'revistas' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
                 onClick={() => useRedirectNavLink('revistas')}
             >
                 REVISTAS
             </button>
             <button 
-                className={`py-5 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'eventos' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
+                className={`py-3 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'eventos' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
                 onClick={() => useRedirectNavLink('eventos')}
             >
                 EVENTOS
             </button>
             <button 
-                className={`py-5 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'arquitectura' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
+                className={`py-3 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'arquitectura' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
                 onClick={() => useRedirectNavLink('arquitectura')}
             >
                 ARQUITECTURA
             </button>
             <button 
-                className={`py-5 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'red' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
+                className={`py-3 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'wiki' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
+                onClick={() => useRedirectNavLink('arquitectura')}
+            >
+                WIKI
+            </button>
+            <button 
+                className={`py-3 px-24 border-x border-gray-50 border-opacity-5 ${sectionSelected === 'red' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
                 onClick={() => useRedirectNavLink('red')}
             >
                 RED

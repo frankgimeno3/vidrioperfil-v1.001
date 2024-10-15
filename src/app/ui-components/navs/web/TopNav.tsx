@@ -64,7 +64,7 @@ const NavWeb: FC<NavWebProps> = () => {
                 )}
             </div>
             <div className='flex flex-row items-center'>
-            <SearchBar color={'white'} lupaColor={'gray-300'} placeholderText={'Buscar...'}/>
+            <SearchBar color={'white'} lupaColor={'gray'} placeholderText={'Buscar...'}/>
             <div className='flex flex-row text-xs '>
                 <button className='px-5 py-2 bg-white bg-opacity-10 hover:bg-opacity-30 text-white  rounded-lg mr-1 '
                  style={{width:'120px'}}>

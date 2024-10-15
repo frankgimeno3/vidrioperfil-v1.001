@@ -1,4 +1,7 @@
 import React, { FC, useState } from 'react';
+import DNotificaciones from './dashboard-components/DNotificaciones';
+import Dalertas from './dashboard-components/Dalertas';
+import Danaliticas from './dashboard-components/Danaliticas';
 
 interface DashboardProps {
 
@@ -15,7 +18,8 @@ const Dashboard: FC<DashboardProps> = ({ }) => {
             <div className='flex flex-row w-full' >
                 {dashboardContent == 'notificaciones'
                     ?
-                    <div className='bg-gray-200 border-r border-gray-300 mr-1' style={{ width: "240px" }} onClick={() => ChangeDashboardContent('notificaciones')}>
+                    <div className='bg-gray-200 border-r border-gray-300 mr-1' style={{ width: "240px" }} 
+                    onClick={() => ChangeDashboardContent('notificaciones')}>
                         <p className='pl-3 py-1'>Página de notificaciones </p>
                     </div>
                     :
@@ -46,8 +50,10 @@ const Dashboard: FC<DashboardProps> = ({ }) => {
                     </div>
                 }
             </div>
-            <div className='bg-gray-200 w-full' style={{height:'1000px'}}  >
-                <p> Si hay que ir se va</p>
+            <div className='bg-gray-200 w-full h-full'    >
+                {dashboardContent == 'notificaciones' && <DNotificaciones/>}
+                {dashboardContent == 'alertas' && <Dalertas/>}
+                {dashboardContent == 'analiticas' && <Danaliticas/>}
             </div>
         </div>
     );

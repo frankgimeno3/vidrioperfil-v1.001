@@ -12,7 +12,7 @@ const AdminLeftNav: FC<AdminLeftNavProps> = ({ currentModule, setCurrentModule }
   };
 
   return (
-    <div className='flex flex-col h-screen bg-gray-300 text-gray-600' style={{ width: '250px' }}>
+    <div className='flex flex-col min-h-screen bg-gray-300 text-gray-600' style={{ width: '250px' }}>
       <div className='bg-gray-700 px-5 py-2'>
         <p className='text-lg text-white'>Módulos</p>
       </div>

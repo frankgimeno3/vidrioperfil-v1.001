@@ -4,12 +4,12 @@ interface SearchBarProps { }
 
 const SearchBar: FC<SearchBarProps> = () => {
   return (
-    <div className='flex flex-row w-96 border border-white rounded-lg text-white '>
+    <div className='flex flex-row w-96 border border-white rounded-lg text-white text-xs'>
             <input
-        className='bg-transparent pl-5 py-2 w-full placeholder-white  h-12'
+        className='bg-transparent pl-4 py-2 w-full placeholder-white  h-8'
         placeholder='Buscar...'
       />
-      <div className='w-20 my-auto'>
+      <div className='w-10 my-auto'>
         <svg
           viewBox="0 0 60 30"
           xmlns="http://www.w3.org/2000/svg"

@@ -7,7 +7,7 @@ interface LogoProps {
 const Logo: FC<LogoProps> = ({ }) => {
   return (
     <div className="flex flex-col  "
-    style={{ width: '450px' }} 
+    style={{ width: '250px' }} 
 >
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -29,7 +29,7 @@ const NavWeb: FC<NavWebProps> = () => {
 
     return (
         <div className='flex flex-row items-center justify-between w-full px-12' style={{ backgroundColor: '#1d305e' }}>
-            <div className='flex flex-row items-center py-2'>
+            <div className='flex flex-row items-center py-2 text-xs'>
                 <div className='py-auto' onClick={() => redirectHome()}>
                     <Logo />
                 </div>
@@ -65,7 +65,7 @@ const NavWeb: FC<NavWebProps> = () => {
             </div>
      
             <SearchBar/>
-            <div className='flex flex-col'>
+            <div className='flex flex-col text-xs'>
                 <button className='px-7 py-1 bg-transparent hover:bg-white hover:bg-opacity-10 text-white border border-white rounded-lg my-1'>Registro</button>
                 <button className='px-7 py-1 bg-transparent hover:bg-white hover:bg-opacity-10 text-white border border-white rounded-lg my-1'>Iniciar sesión</button>
             </div>

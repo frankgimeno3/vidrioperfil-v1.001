@@ -1,3 +1,4 @@
+import Layout from '@/app/layout';
 import React, { FC } from 'react';
 
 interface EventosProps {
@@ -6,8 +7,11 @@ interface EventosProps {
 
 const Eventos: FC<EventosProps> = ({ }) => {
   return (
-    <div>Eventos</div>
-  );
+    <Layout>
+      <div>
+        Eventos
+      </div>
+    </Layout>  );
 };
 
 export default Eventos;

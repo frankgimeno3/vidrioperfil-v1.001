@@ -1,3 +1,4 @@
+import Layout from '@/app/layout';
 import React, { FC } from 'react';
 
 interface PerfilProps {
@@ -6,8 +7,11 @@ interface PerfilProps {
 
 const Perfil: FC<PerfilProps> = ({ }) => {
   return (
-    <div>Perfil</div>
-  );
+    <Layout>
+      <div>
+        Perfil
+      </div>
+    </Layout>  );
 };
 
 export default Perfil;

@@ -1,3 +1,4 @@
+import Layout from '@/app/layout';
 import React, { FC } from 'react';
 
 interface RedProps {
@@ -6,8 +7,11 @@ interface RedProps {
 
 const Red: FC<RedProps> = ({ }) => {
   return (
-    <div>Red</div>
-  );
+    <Layout>
+      <div>
+        Red
+      </div>
+    </Layout>  );
 };
 
 export default Red;

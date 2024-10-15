@@ -1,3 +1,4 @@
+import Layout from '@/app/layout';
 import React, { FC } from 'react';
 
 interface ArquitecturaProps {
@@ -6,8 +7,11 @@ interface ArquitecturaProps {
 
 const Arquitectura: FC<ArquitecturaProps> = ({ }) => {
   return (
-    <div>Arquitectura</div>
-  );
+    <Layout>
+      <div>
+        Arquitectura
+      </div>
+    </Layout>  );
 };
 
 export default Arquitectura;

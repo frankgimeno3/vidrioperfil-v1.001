@@ -1,3 +1,4 @@
+import Layout from '@/app/layout';
 import React, { FC } from 'react';
 
 interface DirectorioProps {
@@ -6,8 +7,11 @@ interface DirectorioProps {
 
 const Directorio: FC<DirectorioProps> = ({ }) => {
   return (
-    <div>Directorio</div>
-  );
+    <Layout>
+      <div>
+        Directorio
+      </div>
+    </Layout>  );
 };
 
 export default Directorio;

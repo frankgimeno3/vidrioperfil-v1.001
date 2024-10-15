@@ -1,12 +1,17 @@
 import React, { FC } from 'react';
+import Layout from '../layout';
 
 interface EsProps {
-  
+
 }
 
 const Es: FC<EsProps> = ({ }) => {
   return (
-    <div>Es</div>
+    <Layout>
+      <div>
+        Es
+      </div>
+    </Layout>
   );
 };
 

@@ -18,8 +18,8 @@ const AdminLeftNav: FC<AdminLeftNavProps> = ({ currentModule, setCurrentModule }
       </div>
       <div className='p-3'>
       <div className='flex flex-row py-2 items-center'>
-          {currentModule === 'notificaciones' ? <div className='bg-gray-700 h-4 w-2 mr-2'></div> : <div className='h-2 w-1 mr-3'></div>}
-          <p onClick={() => selectModule('notificaciones')}>Tablón de notificaciones</p>
+          {currentModule === 'dashboard' ? <div className='bg-gray-700 h-4 w-2 mr-2'></div> : <div className='h-2 w-1 mr-3'></div>}
+          <p onClick={() => selectModule('dashboard')}>Dashboard</p>
         </div>
       <div className='flex flex-row py-2 items-center'>
           {currentModule === 'articulos' ? <div className='bg-gray-700 h-4 w-2 mr-2'></div> : <div className='h-2 w-1 mr-3'></div>}

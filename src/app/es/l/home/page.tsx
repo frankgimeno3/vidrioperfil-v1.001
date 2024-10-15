@@ -1,17 +1,22 @@
-import Layout from '@/app/layout';
-import React, { FC } from 'react';
+"use client"
+import FixedNav from '@/app/ui-components/navs/web/FixedNav';
+import TopNav from '@/app/ui-components/navs/web/TopNav';
+import React, { FC, useState } from 'react';
 
 interface HomeProps {
-  
+
 }
 
 const Home: FC<HomeProps> = ({ }) => {
+  const [sectionSelected, setSectionSelected] = useState('home')
+
   return (
-    <Layout>
-      <div>
-        Es
-      </div>
-    </Layout>  );
+    <div>
+      <TopNav />
+      <FixedNav sectionSelected={sectionSelected}/>
+      Es
+    </div>
+  );
 };
 
 export default Home;

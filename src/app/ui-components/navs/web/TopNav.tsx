@@ -27,7 +27,15 @@ const NavWeb: FC<NavWebProps> = () => {
                 <div className='py-auto'>
                     <Logo />
                 </div>
-                {(edition === 'es') && (
+                {( edition == '' || edition == undefined  ) && (
+                    <div className='flex flex-col ml-12 w-56 mt-2'>
+                        <a href="/es" className='hover:font-bold ' onClick={() => changeEdition('es')}>Edición España</a>
+                        <a href="/pt" className='hover:font-bold' onClick={() => changeEdition('pt')}>Edición Portugal</a>
+                        <a href="/al" className='hover:font-bold' onClick={() => changeEdition('al')}>Edición América Latina</a>
+                    </div>
+                )}
+                              
+                                {(edition === 'es'  ) && (
                     <div className='flex flex-col ml-12 w-56 mt-2'>
                         <a href="/es" className='hover:font-bold font-bold' onClick={() => changeEdition('es')}>Edición España</a>
                         <a href="/pt" className='hover:font-bold' onClick={() => changeEdition('pt')}>Edición Portugal</a>

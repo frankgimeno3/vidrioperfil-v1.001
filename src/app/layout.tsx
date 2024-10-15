@@ -17,8 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TopNav/>
-        <FixedNav/>
+
         {children}
       </body>
     </html>

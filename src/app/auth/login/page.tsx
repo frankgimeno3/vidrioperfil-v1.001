@@ -11,7 +11,7 @@ export default function LoginForm() {
   const videoUrl = 'https://vidrioperfil-main-bucket.s3.eu-west-3.amazonaws.com/general/videos/perfiles.mp4'
 
   const redirect = (destination:string) => {
-    if (destination=='home'){    window.location.href = '/';}
+    if (destination=='home'){    window.location.href = '/es/';}
 };
  
   return (

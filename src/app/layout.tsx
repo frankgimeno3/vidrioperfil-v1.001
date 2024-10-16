@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import FixedNav from "./ui-components/navs/web/FixedNav";
-import TopNav from "./ui-components/navs/web/TopNav";
-
+import "./globals.css"; 
+import ConfigureAmplifyClientSide from "./amplify-cognito-config";
 
 export const metadata: Metadata = {
   title: "VIDRIOPERFIL.COM",
@@ -17,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-
+      <ConfigureAmplifyClientSide />
         {children}
       </body>
     </html>

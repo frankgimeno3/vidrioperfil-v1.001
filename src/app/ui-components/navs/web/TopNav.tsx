@@ -6,8 +6,10 @@ import SearchBar from '../SearchBar';
 interface NavWebProps {}
 
 // Función para redirigir a la página principal
-const redirectHome = () => {
-    window.location.href = '/';
+const redirect = (destination:string) => {
+    if (destination=='home'){    window.location.href = '/';}
+    if (destination=='login'){    window.location.href = '/auth/login';}
+    if (destination=='signup'){    window.location.href = '/auth/signup';}
 };
 
 const NavWeb: FC<NavWebProps> = () => {
@@ -27,10 +29,11 @@ const NavWeb: FC<NavWebProps> = () => {
         setEdition(chosenEdition);
     };
 
+ 
     return (
         <div className='flex flex-row items-center justify-between w-full px-12 text-gray-300' style={{ backgroundColor: '#1d305e' }}>
             <div className='flex flex-row justify-between items-center py-2 text-xs '>
-                <div className='py-auto' onClick={() => redirectHome()}>
+                <div className='py-auto' onClick={() => redirect('home')}>
                     <Logo />
                 </div>
                 {( edition == '' || edition == undefined  ) && (
@@ -67,10 +70,12 @@ const NavWeb: FC<NavWebProps> = () => {
             <SearchBar color={'white'} lupaColor={'gray'} placeholderText={'Buscar...'}/>
             <div className='flex flex-row text-xs '>
                 <button className='px-5 py-2 bg-white bg-opacity-10 hover:bg-opacity-30 text-white  rounded-lg mr-1 '
-                 style={{width:'120px'}}>
+                 style={{width:'120px'}}
+                 onClick={() => redirect('signup')}>
                     Registro</button>
                     <button className='px-5 py-2 bg-white bg-opacity-10 hover:bg-opacity-30 text-white  rounded-lg mr-1 '
-                style={{width:'120px'}}>
+                style={{width:'120px'}}
+                onClick={() => redirect('login')}>
                     Iniciar sesión</button>
             </div>
             </div>

@@ -9,6 +9,10 @@ import Logo from "@/app/ui-components/logo/Logo";
 export default function SignUpForm() {
   const [errorMessage, dispatch] = useFormState(handleSignUp, undefined);
   const videoUrl = 'https://vidrioperfil-main-bucket.s3.eu-west-3.amazonaws.com/general/videos/perfiles.mp4'
+ 
+  const redirect = (destination:string) => {
+    if (destination=='home'){    window.location.href = '/';}
+};
 
   return (
     <div className='relative'>
@@ -21,7 +25,7 @@ export default function SignUpForm() {
       ></video>
       <form action={dispatch} className="relative text-white mx-auto h-full " style={{ width: '700px' }}>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-8   h-screen   bg-zinc-900 bg-opacity-50" >
-          <div className="mx-auto "  >
+          <div className="mx-auto " onClick={() => redirect('home')} >
             <Logo />
           </div>
           <h1 className=' my-3   text-2xl text-center'>

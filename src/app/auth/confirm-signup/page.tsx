@@ -5,14 +5,31 @@
 import { handleConfirmSignUp } from "@/actions/cognitoActions";
  import { Superbutton } from "@/app/ui-components/auth/Superbutton";
 import SendVerificationCode from "@/app/ui-components/auth/send-verification-code-form";
+import Logo from "@/app/ui-components/logo/Logo";
 
 export default function ConfirmSignUpForm() {
   const [errorMessage, dispatch] = useFormState(handleConfirmSignUp, undefined);
+  const videoUrl = 'https://vidrioperfil-main-bucket.s3.eu-west-3.amazonaws.com/general/videos/perfiles.mp4'
+
+  const redirect = (destination:string) => {
+    if (destination=='home'){    window.location.href = '/';}
+};
   return (
-    <form action={dispatch} className="space-y-3">
-      <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
-        <h1 className={`  mb-3 text-2xl`}>
-          Please confirm your account.
+    <div className='relative'>
+    <video
+      className="fixed top-0 left-0 object-cover h-screen w-screen bg-black opacity-90 overflow-hidden"
+      src={videoUrl}
+      autoPlay
+      loop
+      muted
+    ></video>
+      <form action={dispatch} className="relative text-white mx-auto h-full " style={{ width: '700px' }}>
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-8   h-screen   bg-zinc-900 bg-opacity-50" >
+      <div className="mx-auto " onClick={() => redirect('home')} >
+            <Logo />
+          </div>
+      <h1 className=' my-3   text-2xl text-center'>
+      Por favor, confirme su correo electrónico
         </h1>
         <div className="w-full">
           <div>
@@ -38,7 +55,7 @@ export default function ConfirmSignUpForm() {
               className="mb-3 mt-5 block text-xs font-medium text-gray-900"
               htmlFor="code"
             >
-              Code
+              Código recibido
             </label>
             <div className="relative">
               <input
@@ -46,14 +63,16 @@ export default function ConfirmSignUpForm() {
                 id="code"
                 type="text"
                 name="code"
-                placeholder="Enter code"
+                placeholder="Introduzca el código que ha recibido"
                 required
                 minLength={6}
               />
              </div>
           </div>
         </div>
+        <div className="mx-auto my-5">
         <ConfirmButton />
+          </div>
         <div className="flex h-8 items-end space-x-1">
           <div
             className="flex h-8 items-end space-x-1"
@@ -70,6 +89,8 @@ export default function ConfirmSignUpForm() {
         <SendVerificationCode />
       </div>
     </form>
+    </div>
+
   );
 }
 
@@ -78,7 +99,7 @@ function ConfirmButton() {
 
   return (
     <Superbutton className="mt-4 w-full" aria-disabled={pending}>
-      Confirm  
+      Confirmar
     </Superbutton>
   );
 }

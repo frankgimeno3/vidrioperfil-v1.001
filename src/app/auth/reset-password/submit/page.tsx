@@ -3,19 +3,36 @@
 import { useFormState, useFormStatus } from "react-dom";
 import { handleResetPassword } from "@/actions/cognitoActions";
 import { Superbutton } from "@/app/ui-components/auth/Superbutton";
+import Logo from "@/app/ui-components/logo/Logo";
  
 export default function SubmitResetPasswordFrom() {
   const [errorMessage, dispatch] = useFormState(handleResetPassword, undefined);
+  const videoUrl = 'https://vidrioperfil-main-bucket.s3.eu-west-3.amazonaws.com/general/videos/perfiles.mp4'
+
+  const redirect = (destination:string) => {
+    if (destination=='home'){    window.location.href = '/';}
+};
   return (
-    <form action={dispatch} className="space-y-3">
-      <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
-        <h1 className={` mb-3 text-2xl`}>
-          Please enter your email to get confirmation code.
+    <div className='relative'>
+    <video
+      className="fixed top-0 left-0 object-cover h-screen w-screen bg-black opacity-90 overflow-hidden"
+      src={videoUrl}
+      autoPlay
+      loop
+      muted
+    ></video>
+      <form action={dispatch} className="relative text-white mx-auto h-full " style={{ width: '700px' }}>
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6     h-screen   bg-zinc-900 bg-opacity-50" >
+      <div className="mx-auto " onClick={() => redirect('home')} >
+            <Logo />
+          </div>        
+          <h1 className=' my-3 mx-auto  text-2xl text-center' style={{ width: '500px' }}>
+          Introduzca su correo electrónico para recibir un código de confirmación
         </h1>
-        <div className="w-full">
+        <div className="w-full mx-auto" style={{ width: '500px' }}> 
           <div>
             <label
-              className="mb-3 mt-5 block text-xs font-medium text-gray-900"
+              className="mb-3 mt-5 block text-xs font-medium text-white"
               htmlFor="email"
             >
               Email
@@ -26,13 +43,15 @@ export default function SubmitResetPasswordFrom() {
                 id="email"
                 type="email"
                 name="email"
-                placeholder="Enter your email address"
+                placeholder="Introduzca su correo electrónico"
                 required
               />
              </div>
           </div>
         </div>
+        <div className="mx-auto my-5">
         <SendConfirmationCodeButton />
+          </div>
         <div className="flex h-8 items-end space-x-1">
           <div
             className="flex h-8 items-end space-x-1"
@@ -48,6 +67,8 @@ export default function SubmitResetPasswordFrom() {
         </div>
       </div>
     </form>
+    </div>
+
   );
 }
 
@@ -56,7 +77,7 @@ function SendConfirmationCodeButton() {
 
   return (
     <Superbutton className="mt-4 w-full" aria-disabled={pending}>
-      Send Code  
+      Enviar código 
     </Superbutton>
   );
 }

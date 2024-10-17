@@ -71,7 +71,7 @@ const NavWeb: FC<NavWebProps> = ({isLoggedIn}) => {
                 )}
             </div>
             <div className='flex flex-row items-center'>
-                <SearchBar color={'white'} lupaColor={'gray'} placeholderText={'Buscar...'} />
+                <SearchBar color={'white'} placeholderText={'Buscar...'} />
                 <div className='flex flex-row text-xs '>
                     {isLoggedIn ? (
                         <button className='px-5 py-2 bg-red-500 hover:bg-red-700 text-white rounded-lg mr-1'

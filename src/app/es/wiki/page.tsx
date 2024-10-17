@@ -22,7 +22,7 @@ const Wiki: FC<WikiProps> = ({ }) => {
       <p className="text-lg text-gray-700 mb-1">
         Bienvenido a Glasswiki, la enciclopedia del sector del vidrio.
       </p>
-      <SearchBar color={'gray-300'} placeholderText={'Busque por nombre, temática, etiqueta...'} lupaColor={'gray-300'}/>
+      <SearchBar color={'gray-300'} placeholderText={'Busque por nombre, temática, etiqueta...'}  />
       </div>
 
       <div className="flex flex-row w-full text-gray-500 px-12 mt-12">

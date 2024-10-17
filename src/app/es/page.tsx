@@ -12,7 +12,7 @@ const Es: FC<EsProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav />
+      <TopNav isLoggedIn={false} />
       <FixedNav sectionSelected={sectionSelected}/>
       Es
     </div>

@@ -12,7 +12,7 @@ const Home: FC<HomeProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav />
+      <TopNav isLoggedIn={true} />
       <FixedNav sectionSelected={sectionSelected}/>
       Home
     </div>

@@ -12,7 +12,7 @@ const Red: FC<RedProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav />
+      <TopNav isLoggedIn={true} />
       <FixedNav sectionSelected={sectionSelected}/>
       Red
     </div>

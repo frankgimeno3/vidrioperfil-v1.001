@@ -8,7 +8,7 @@ import TopNav from "./ui-components/navs/web/TopNav";
 export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen  ">
-      <TopNav />
+      <TopNav isLoggedIn={false} />
       <FixedNav sectionSelected={"home"} />
       <div className="px-24 py-5 text-gray-500">
         <HeroSection />

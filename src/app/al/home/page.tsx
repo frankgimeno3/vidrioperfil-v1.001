@@ -11,8 +11,8 @@ const Home: FC<HomeProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav />
-       <FixedNav sectionSelected={sectionSelected}/>      Home</div>
+      <TopNav isLoggedIn={true} />
+      <FixedNav sectionSelected={sectionSelected}/>      Home</div>
   );
 };
 

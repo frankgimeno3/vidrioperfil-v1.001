@@ -15,7 +15,7 @@ const Perfil: FC<PerfilProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav />
+      <TopNav isLoggedIn={true} />
       <FixedNav sectionSelected={sectionSelected}/>
       <main>
       <div className="flex w-full items-center justify-between mb-4">

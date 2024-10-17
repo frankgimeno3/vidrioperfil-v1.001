@@ -14,7 +14,7 @@ const Wiki: FC<WikiProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav isLoggedIn={false} />
+      <TopNav isLoggedIn={true} />
       <FixedNav sectionSelected={sectionSelected}/>
       <div className="min-h-screen bg-gray-50 flex flex-col items-center  pt-36">
       <div className="mb-12 text-center">

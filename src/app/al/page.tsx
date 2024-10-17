@@ -12,7 +12,7 @@ const Al: FC<AlProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav />
+      <TopNav isLoggedIn={false} />
       <FixedNav sectionSelected={sectionSelected}/>
       Al
     </div>

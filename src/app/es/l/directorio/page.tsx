@@ -13,7 +13,7 @@ const Directorio: FC<DirectorioProps> = ({ }) => {
   return (
 
     <div>
-      <TopNav />
+      <TopNav isLoggedIn={true} />
       <FixedNav sectionSelected={sectionSelected}/>
       Directorio
     </div>

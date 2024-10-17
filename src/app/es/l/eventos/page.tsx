@@ -12,7 +12,7 @@ const Eventos: FC<EventosProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav />
+      <TopNav isLoggedIn={true} />
       <FixedNav sectionSelected={sectionSelected}/>
       Eventos
     </div>

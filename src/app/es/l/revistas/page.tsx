@@ -12,7 +12,7 @@ const Revistas: FC<RevistasProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav />
+      <TopNav isLoggedIn={true} />
       <FixedNav sectionSelected={sectionSelected}/>
       Revistas
     </div>

@@ -12,7 +12,7 @@ const Arquitectura: FC<ArquitecturaProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav />
+      <TopNav isLoggedIn={true} />
       <FixedNav sectionSelected={sectionSelected}/>
       Arquitectura
     </div>

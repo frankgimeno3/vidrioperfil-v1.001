@@ -12,7 +12,7 @@ const Pt: FC<PtProps> = ({ }) => {
 
   return (
     <div>
-      <TopNav />
+      <TopNav isLoggedIn={false} />
       <FixedNav sectionSelected={sectionSelected}/>
       Pt
     </div>

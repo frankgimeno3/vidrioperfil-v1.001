@@ -22,7 +22,7 @@ const Directorio: FC<DirectorioProps> = ({ }) => {
 
   return (
     <div className='text-gray-500 bg-gray-200 min-h-screen'>
-      <TopNav />
+      <TopNav isLoggedIn={false} />
       <FixedNav sectionSelected={sectionSelected} />
 
       <div className='p-12 w-full flex flex-col'>

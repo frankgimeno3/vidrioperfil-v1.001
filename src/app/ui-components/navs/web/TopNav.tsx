@@ -3,6 +3,8 @@ import React, { FC, useState, useEffect } from 'react';
 import Logo from '../../logo/Logo';
 import SearchBar from '../SearchBar';
 import { handleSignOut } from '@/actions/cognitoActions';
+import MenuIcon from './MenuIcon';
+import MessagesIcon from './MessagesIcon';
 
 interface NavWebProps {
     isLoggedIn:boolean;
@@ -70,14 +72,18 @@ const NavWeb: FC<NavWebProps> = ({isLoggedIn}) => {
                     </div>
                 )}
             </div>
-            <div className='flex flex-row items-center'>
+            <div className='flex flex-row items-center '>
                 <SearchBar color={'white'} placeholderText={'Buscar...'} />
-                <div className='flex flex-row text-xs '>
+                <div className='flex flex-row text-xs items-center my-auto '>
                     {isLoggedIn ? (
-                        <button className='px-5 py-2 bg-red-500 hover:bg-red-700 text-white rounded-lg mr-1'
-                            onClick={()=>handleCerrarSesion()}>
+                        <div className=' border border-white flex flex-row items-center '>
+                            <MessagesIcon isOpen={false}/>
+                            <MenuIcon/>
+                             <button className='px-5 py-2 bg-red-500 hover:bg-red-700 text-white rounded-lg mr-1'
+                            onClick={()=>handleCerrarSesion()} >
                             Cerrar Sesión
                         </button>
+                        </div>
                     ) : (
                         <>
                             <button className='px-5 py-2 bg-white bg-opacity-10 hover:bg-opacity-30 text-white rounded-lg mr-1'

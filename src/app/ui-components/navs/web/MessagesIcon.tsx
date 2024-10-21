@@ -6,7 +6,7 @@ interface MessagesIconProps {
 
 const MessagesIcon: FC<MessagesIconProps> = ({ isOpen }) => {
     return (
-        <div className='h-12 w-12 my-auto'>
+        <div className='h-full mx-3'>
             {isOpen ? (
                <svg
                     id="Layer_1"

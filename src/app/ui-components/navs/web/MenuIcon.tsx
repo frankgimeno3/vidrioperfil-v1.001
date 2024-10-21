@@ -4,7 +4,7 @@ interface MenuIconProps {}
 
 const MenuIcon: FC<MenuIconProps> = () => {
   return (
-    <div className='h-12 w-12 my-auto'>
+    <div className='h-full mx-3'>
       <svg
       id="Layer_1"
       version="1.1"
@@ -12,7 +12,7 @@ const MenuIcon: FC<MenuIconProps> = () => {
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      className="fill-current text-white h-7 w-7" 
+      className="fill-current text-white h-7 w-7   h-12 w-12  " 
     >
       <g>
         <g>

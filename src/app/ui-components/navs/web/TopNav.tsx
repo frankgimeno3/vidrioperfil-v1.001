@@ -5,6 +5,7 @@ import SearchBar from '../SearchBar';
 import { handleSignOut } from '@/actions/cognitoActions';
 import MenuIcon from './MenuIcon';
 import MessagesIcon from './MessagesIcon';
+import ProfileIcon from './ProfileIcon';
 
 interface NavWebProps {
     isLoggedIn:boolean;
@@ -76,8 +77,9 @@ const NavWeb: FC<NavWebProps> = ({isLoggedIn}) => {
                 <SearchBar color={'white'} placeholderText={'Buscar...'} />
                 <div className='flex flex-row text-xs items-center my-auto '>
                     {isLoggedIn ? (
-                        <div className=' border border-white flex flex-row items-center '>
+                        <div className='  flex flex-row items-center '>
                             <MessagesIcon isOpen={false}/>
+                            <ProfileIcon/>
                             <MenuIcon/>
                              <button className='px-5 py-2 bg-red-500 hover:bg-red-700 text-white rounded-lg mr-1'
                             onClick={()=>handleCerrarSesion()} >

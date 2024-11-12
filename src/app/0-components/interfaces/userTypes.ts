@@ -4,10 +4,10 @@ export interface UserStructure {
   userEmail: string;
   isModerator: boolean;
   personalAccountId: string;
-  companyAccounts: CompanyAccountsElement[];  
+  managedAccounts: ManagedAccountsElement[];  
 }
 
-export interface CompanyAccountsElement {
+export interface ManagedAccountsElement {
   companyAccountId: string;
   rolesArray: string[];
 }

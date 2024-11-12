@@ -2,7 +2,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import Logo from '../../logo/Logo';
 import SearchBar from '../SearchBar';
-import { handleSignOut } from '@/actions/cognitoActions';
+import { handleSignOut } from '@/actions/cognitoActions/cognitoActions';
 import MenuIcon from './MenuIcon';
 import MessagesIcon from './MessagesIcon';
 import ProfileIcon from './ProfileIcon';

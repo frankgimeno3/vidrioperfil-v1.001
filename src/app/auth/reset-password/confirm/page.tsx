@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormState, useFormStatus } from "react-dom";
-import { handleConfirmResetPassword } from "@/actions/cognitoActions";
+import { handleConfirmResetPassword } from "@/actions/cognitoActions/cognitoActions";
 import { Superbutton } from "@/app/ui-components/auth/Superbutton";
  
 export default function ConfirmResetPasswordForm() {

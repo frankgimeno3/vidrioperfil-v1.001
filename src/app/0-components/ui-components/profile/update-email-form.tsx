@@ -4,7 +4,7 @@ import { useFormState, useFormStatus } from "react-dom";
  
 import useAuthUser from "@/app/hooks/use-auth-user";
 import { Superbutton } from "../auth/Superbutton";
-import { handleConfirmUserAttribute, handleUpdateUserAttribute } from "@/actions/cognitoActions";
+import { handleConfirmUserAttribute, handleUpdateUserAttribute } from "@/actions/cognitoActions/cognitoActions";
  
 export default function UpdateEmailForm() {
   const user = useAuthUser();

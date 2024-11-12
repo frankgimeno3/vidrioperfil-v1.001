@@ -1,7 +1,7 @@
 "use client";
  import { useFormState, useFormStatus } from "react-dom";
 import { Superbutton } from "../auth/Superbutton";
-import { handleUpdatePassword } from "@/actions/cognitoActions";
+import { handleUpdatePassword } from "@/actions/cognitoActions/cognitoActions";
  
 export default function UpdatePasswordForm() {
   const [status, dispatch] = useFormState(handleUpdatePassword, undefined);

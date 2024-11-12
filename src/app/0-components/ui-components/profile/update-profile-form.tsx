@@ -2,7 +2,7 @@
  import { useFormState, useFormStatus } from "react-dom";
  import useAuthUser from "@/app/hooks/use-auth-user";
 import { Superbutton } from "../auth/Superbutton";
-import { handleUpdateUserAttribute } from "@/actions/cognitoActions";
+import { handleUpdateUserAttribute } from "@/actions/cognitoActions/cognitoActions";
  
 export default function UpdateProfileForm() {
   const user = useAuthUser();

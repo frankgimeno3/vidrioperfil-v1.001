@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import { useFormState, useFormStatus } from "react-dom";
-import { handleSignUp } from "@/actions/cognitoActions";
+import { handleSignUp } from "@/actions/cognitoActions/cognitoActions";
 import Link from "next/link";
 import { Superbutton } from "@/app/ui-components/auth/Superbutton";
 import Logo from "@/app/ui-components/logo/Logo";

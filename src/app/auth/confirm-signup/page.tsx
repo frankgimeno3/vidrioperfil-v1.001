@@ -2,7 +2,7 @@
 
 
 import { useFormState, useFormStatus } from "react-dom";
-import { handleConfirmSignUp } from "@/actions/cognitoActions";
+import { handleConfirmSignUp } from "@/actions/cognitoActions/cognitoActions";
 import { Superbutton } from "@/app/ui-components/auth/Superbutton";
 import SendVerificationCode from "@/app/ui-components/auth/send-verification-code-form";
 import Logo from "@/app/ui-components/logo/Logo";

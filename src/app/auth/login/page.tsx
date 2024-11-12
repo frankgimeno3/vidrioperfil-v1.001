@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormState, useFormStatus } from "react-dom";
-import { handleSignIn } from "@/actions/cognitoActions";
+import { handleSignIn } from "@/actions/cognitoActions/cognitoActions";
 import Link from "next/link";
 import { Superbutton } from "@/app/ui-components/auth/Superbutton";
 import Logo from "@/app/ui-components/logo/Logo";

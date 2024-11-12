@@ -1,13 +1,13 @@
-"use client"
+"use client";
 import { useState } from "react";
-import { useFormState, useFormStatus } from "react-dom";
-import { handleSignUp } from "@/actions/cognitoActions/cognitoActions";
+import { useFormStatus } from "react-dom";
 import Link from "next/link";
-import { Superbutton } from "@/app/ui-components/auth/Superbutton";
-import Logo from "@/app/ui-components/logo/Logo";
+import { handleSignUp } from "@/actions/cognitoActions/authHandlers/signUp";
+import Logo from "@/app/0-components/ui-components/logo/Logo";
+import { Superbutton } from "@/app/0-components/ui-components/auth/Superbutton";
 
 export default function SignUpForm() {
-  const [errorMessage, dispatch] = useFormState(handleSignUp, undefined);
+  const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined);
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordsMatch, setPasswordsMatch] = useState(false);
@@ -30,6 +30,21 @@ export default function SignUpForm() {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+
+    try {
+      const result = await handleSignUp(formData);
+      if (result) {
+        setErrorMessage(result);
+      }
+    } catch (error) {
+      setErrorMessage("Error al crear la cuenta. Inténtelo de nuevo.");
+    }
+  };
+
   return (
     <div className="relative">
       <video
@@ -39,7 +54,7 @@ export default function SignUpForm() {
         loop
         muted
       ></video>
-      <form action={dispatch} className="relative text-white mx-auto h-full" style={{ width: '700px' }}>
+      <form onSubmit={handleSubmit} className="relative text-white mx-auto h-full" style={{ width: '700px' }}>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-8 h-screen bg-zinc-900 bg-opacity-50">
           <div className="mx-auto" onClick={() => redirect('home')}>
             <Logo />

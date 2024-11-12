@@ -12,7 +12,7 @@ const Revistas: FC<RevistasProps> = ({ }) => {
 
   return (
     <div className='bg-gray-200 text-gray-600'>
-      <TopNav isLoggedIn={false} />
+      <TopNav isLoggedIn={true} />
       <FixedNav sectionSelected={sectionSelected} />
       <div className='min-h-screen'>
       <div className='flex flex-col '>

@@ -61,12 +61,7 @@ const FixedNav: FC<FixedNavProps> = ({ sectionSelected }) => {
             >
                 Arquitectura
             </button>
-            <button 
-                className={` py-2  w-full border-x border-gray-50 border-opacity-5 ${sectionSelected === 'wiki' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
-                onClick={() => useRedirectNavLink('wiki')}
-            >
-                Wiki
-            </button>
+        
             <button 
                 className={` py-2  w-full border-x border-gray-50 border-opacity-5 ${sectionSelected === 'red' ? 'bg-opacity-50 bg-gray-400' : 'hover:bg-opacity-10 hover:bg-gray-50'}`} 
                 onClick={() => useRedirectNavLink('red')}

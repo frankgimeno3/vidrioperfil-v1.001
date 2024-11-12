@@ -4,8 +4,8 @@
 
  import { useFormState, useFormStatus } from "react-dom";
 import { Superbutton } from "./Superbutton";
-import { handleSendEmailVerificationCode } from "@/actions/cognitoActions/cognitoActions";
-  
+import { handleSendEmailVerificationCode } from "@/actions/cognitoActions/authHandlers/signUp";
+   
 export default function SendVerificationCode() {
   const [response, dispatch] = useFormState(handleSendEmailVerificationCode, {
     message: "",

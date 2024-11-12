@@ -1,9 +1,8 @@
 "use client";
  
-import { useFormState, useFormStatus } from "react-dom";
-import { handleResetPassword } from "@/actions/cognitoActions/cognitoActions";
-import { Superbutton } from "@/app/ui-components/auth/Superbutton";
-import Logo from "@/app/ui-components/logo/Logo";
+import { handleResetPassword } from "@/actions/cognitoActions/authHandlers/passwordManagement";
+ import { useFormState, useFormStatus } from "react-dom";
+ 
  
 export default function SubmitResetPasswordFrom() {
   const [errorMessage, dispatch] = useFormState(handleResetPassword, undefined);

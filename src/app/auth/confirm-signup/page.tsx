@@ -1,11 +1,12 @@
 "use client";
 
 
+import { handleConfirmSignUp } from "@/actions/cognitoActions/authHandlers/signUp";
+import SendVerificationCode from "@/app/0-components/ui-components/auth/send-verification-code-form";
+import { Superbutton } from "@/app/0-components/ui-components/auth/Superbutton";
+import Logo from "@/app/0-components/ui-components/logo/Logo";
 import { useFormState, useFormStatus } from "react-dom";
-import { handleConfirmSignUp } from "@/actions/cognitoActions/cognitoActions";
-import { Superbutton } from "@/app/ui-components/auth/Superbutton";
-import SendVerificationCode from "@/app/ui-components/auth/send-verification-code-form";
-import Logo from "@/app/ui-components/logo/Logo";
+ 
 
 export default function ConfirmSignUpForm() {
   const [errorMessage, dispatch] = useFormState(handleConfirmSignUp, undefined);

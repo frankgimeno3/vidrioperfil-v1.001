@@ -1,9 +1,10 @@
 "use client"
-import FixedNav from '@/app/ui-components/navs/web/FixedNav';
-import TopNav from '@/app/ui-components/navs/web/TopNav';
-import UpdateEmailForm from '@/app/ui-components/profile/update-email-form';
-import UpdatePasswordForm from '@/app/ui-components/profile/update-password-form';
-import UpdateProfileForm from '@/app/ui-components/profile/update-profile-form';
+ 
+import FixedNav from '@/app/0-components/ui-components/navs/web/FixedNav';
+import TopNav from '@/app/0-components/ui-components/navs/web/TopNav';
+import UpdateEmailForm from '@/app/0-components/ui-components/profile/update-email-form';
+import UpdatePasswordForm from '@/app/0-components/ui-components/profile/update-password-form';
+import UpdateProfileForm from '@/app/0-components/ui-components/profile/update-profile-form';
 import React, { FC, useState } from 'react';
 
 interface PerfilProps {

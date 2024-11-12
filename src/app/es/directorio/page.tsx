@@ -1,10 +1,11 @@
 "use client"
-import SearchBar from '@/app/ui-components/navs/SearchBar';
-import FixedNav from '@/app/ui-components/navs/web/FixedNav';
-import TopNav from '@/app/ui-components/navs/web/TopNav';
+ 
 import React, { FC, useState } from 'react';
 import SumarioVidrio from './SumarioVidrio';
 import SumarioCarpinteria from './SumarioCarpintería';
+import SearchBar from '@/app/0-components/ui-components/navs/SearchBar';
+import TopNav from '@/app/0-components/ui-components/navs/web/TopNav';
+import FixedNav from '@/app/0-components/ui-components/navs/web/FixedNav';
 
 interface DirectorioProps {
 
@@ -31,7 +32,7 @@ const Directorio: FC<DirectorioProps> = ({ }) => {
             <p className='text-3xl'>Directorio de <span className='font-bold'>vidrioperfil.com</span></p>
             <p>Miles de perfiles del sector del vidrio y carpintería le esperan</p>
             <div className='w-full my-3'>
-              <SearchBar color={'gray-500'} lupaColor={'gray-400'} placeholderText={'Busque por nombre o marca'} />
+              <SearchBar color={'gray-500'} placeholderText={'Busque por nombre o marca'} />
             </div>
           </div>
           <div className='w-full pl-12 '>

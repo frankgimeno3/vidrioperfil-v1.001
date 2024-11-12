@@ -1,7 +1,7 @@
 "use client"
-import React, { FC, useState } from 'react';
-import TopNav from '../ui-components/navs/web/TopNav';
-import FixedNav from '../ui-components/navs/web/FixedNav';
+import React, { FC, useState } from 'react'; 
+import TopNav from '../0-components/ui-components/navs/web/TopNav';
+import FixedNav from '../0-components/ui-components/navs/web/FixedNav';
 
 interface AlProps {
 

@@ -1,6 +1,7 @@
 "use client"
-import FixedNav from '@/app/ui-components/navs/web/FixedNav';
-import TopNav from '@/app/ui-components/navs/web/TopNav';
+ 
+import FixedNav from '@/app/0-components/ui-components/navs/web/FixedNav';
+import TopNav from '@/app/0-components/ui-components/navs/web/TopNav';
 import React, { FC, useState } from 'react';
 
 interface ArquitecturaProps {

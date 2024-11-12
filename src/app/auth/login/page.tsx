@@ -1,10 +1,11 @@
 "use client";
 
 import { useFormState, useFormStatus } from "react-dom";
-import { handleSignIn } from "@/actions/cognitoActions/cognitoActions";
-import Link from "next/link";
-import { Superbutton } from "@/app/ui-components/auth/Superbutton";
-import Logo from "@/app/ui-components/logo/Logo";
+ import Link from "next/link";
+import { handleSignIn } from "@/actions/cognitoActions/authHandlers/signIn";
+import { Superbutton } from "@/app/0-components/ui-components/auth/Superbutton";
+import Logo from "@/app/0-components/ui-components/logo/Logo";
+ 
 
 export default function LoginForm() {
   const [errorMessage, dispatch] = useFormState(handleSignIn, undefined);

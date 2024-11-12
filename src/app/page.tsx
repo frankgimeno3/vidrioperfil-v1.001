@@ -1,8 +1,11 @@
 "use client"
-import ArticleRow from "./ui-components/articles/ArticleRow";
-import HeroSection from "./ui-components/articles/HeroSection";
-import FixedNav from "./ui-components/navs/web/FixedNav";
-import TopNav from "./ui-components/navs/web/TopNav";
+
+import ArticleRow from "./0-components/ui-components/articles/ArticleRow";
+import HeroSection from "./0-components/ui-components/articles/HeroSection";
+import FixedNav from "./0-components/ui-components/navs/web/FixedNav";
+import TopNav from "./0-components/ui-components/navs/web/TopNav";
+
+ 
 
 
 export default function Home() {
